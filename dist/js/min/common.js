@@ -1,0 +1,1 @@
+var Common=function(){this.init=function(){console.log("Initialize!")},this.init()},common=new Common;
