@@ -1,3 +1,25 @@
 @charset "UTF-8";
 // global
-@import "reset";
+@import "reset", "mixin", "variable";
+
+.btn {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid $black;
+  border-radius: 6px;
+  &:after {
+    @include ico_angle_vrt("left", 17px, 7px, 4px, #222, inline-block, absolute);
+    top: 50%;
+    right: 0;
+  }
+  &.disable {
+    &:after {
+      border-color: #ccc;
+    }
+  }
+}
